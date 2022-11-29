@@ -8,7 +8,16 @@ const MealsOverViewScreen = ({ route }) => {
   });
 
   const renderMealItem = (itemData) => {
-    return <MealItem title={itemData.item.title} />;
+    return (
+      <MealItem
+        id={itemData.item.id}
+        title={itemData.item.title}
+        imageURL={itemData.item.imageUrl}
+        affordability={itemData.item.affordability}
+        complexity={itemData.item.complexity}
+        duration={itemData.item.duration}
+      />
+    );
   };
   return (
     <View style={styles.container}>
